@@ -40,6 +40,7 @@ nav {
   display: flex; align-items: center; justify-content: space-between;
   padding: 1.1rem 2.5rem;
   mix-blend-mode: multiply;
+  BACKGROUND: #f2ede6;
 }
 .nav-logo {
   font-family: var(--font-display);
@@ -79,6 +80,32 @@ nav {
   height: 350px;
   width: auto;
 }
+
+/* ─── TOAST ─── */
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: var(--ink); 
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  font-family: sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s, bottom 0.3s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 80px; 
+}
+
 
 /* ─── HERO ─── */
 #hero {
